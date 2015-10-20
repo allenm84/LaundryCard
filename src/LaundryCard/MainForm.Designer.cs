@@ -272,8 +272,8 @@
             this.colID,
             this.colDate,
             this.colType,
-            this.colAmount,
-            this.colNotes});
+            this.colNotes,
+            this.colAmount});
       this.gridViewEntries.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
       this.gridViewEntries.GridControl = this.gridEntries;
       this.gridViewEntries.GroupFormat = "[#image]{1} {2}";
@@ -339,27 +339,27 @@
       // colAmount
       // 
       this.colAmount.AppearanceCell.Options.UseTextOptions = true;
-      this.colAmount.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+      this.colAmount.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
       this.colAmount.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
       this.colAmount.DisplayFormat.FormatString = "c2";
       this.colAmount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
       this.colAmount.FieldName = "Amount";
-      this.colAmount.MaxWidth = 80;
-      this.colAmount.MinWidth = 80;
+      this.colAmount.MaxWidth = 200;
+      this.colAmount.MinWidth = 200;
       this.colAmount.Name = "colAmount";
       this.colAmount.OptionsColumn.AllowSize = false;
       this.colAmount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Amount", "Card Balance: {0:c2}")});
       this.colAmount.Visible = true;
-      this.colAmount.VisibleIndex = 2;
-      this.colAmount.Width = 80;
+      this.colAmount.VisibleIndex = 3;
+      this.colAmount.Width = 200;
       // 
       // colNotes
       // 
       this.colNotes.FieldName = "Notes";
       this.colNotes.Name = "colNotes";
       this.colNotes.Visible = true;
-      this.colNotes.VisibleIndex = 3;
+      this.colNotes.VisibleIndex = 2;
       this.colNotes.Width = 207;
       // 
       // layoutControlGroup1
