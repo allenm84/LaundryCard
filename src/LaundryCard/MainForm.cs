@@ -39,12 +39,17 @@ namespace LaundryCard
     private void FinishGridInit()
     {
       cboEntryTypes.FillWithEnum<LaundryCardEntryType>();
-      colDate.SortIndex = 0;
-      colDate.SortOrder = DevExpress.Data.ColumnSortOrder.Descending;
-      colType.SortIndex = 1;
+
+      colType.SortIndex = 0;
       colType.SortOrder = DevExpress.Data.ColumnSortOrder.Descending;
-      colID.SortIndex = 2;
+
+      colID.SortIndex = 1;
       colID.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
+
+      colDate.SortOrder = DevExpress.Data.ColumnSortOrder.Descending;
+      colDate.Group();
+      colDate.GroupFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+      colDate.GroupFormat.FormatString = "D";
     }
 
     #region ISingleInstanceApplicationView Members
@@ -65,7 +70,7 @@ namespace LaundryCard
 
     public void ShowError(string text)
     {
-      MessageBox.Show(this, text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+      XtraMessageBox.Show(this, text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
     }
 
     public void SetIsWorking(bool working)
@@ -93,7 +98,7 @@ namespace LaundryCard
       if (IsEmpty(SaveFile.Instance.Settings))
       {
         var msg = string.Format(Resources.IsCostSetupMessage, type);
-        var result = MessageBox.Show(this, msg, type.ToString(),
+        var result = XtraMessageBox.Show(this, msg, type.ToString(),
           MessageBoxButtons.YesNo, MessageBoxIcon.Question);
         if (result == System.Windows.Forms.DialogResult.No) return false;
       }

@@ -276,6 +276,7 @@
             this.colNotes});
       this.gridViewEntries.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
       this.gridViewEntries.GridControl = this.gridEntries;
+      this.gridViewEntries.GroupFormat = "[#image]{1} {2}";
       this.gridViewEntries.Name = "gridViewEntries";
       this.gridViewEntries.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
       this.gridViewEntries.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
@@ -311,6 +312,7 @@
       this.colDate.Name = "colDate";
       this.colDate.Visible = true;
       this.colDate.VisibleIndex = 0;
+      this.colDate.Width = 143;
       // 
       // colType
       // 
@@ -319,9 +321,13 @@
       this.colType.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
       this.colType.ColumnEdit = this.cboEntryTypes;
       this.colType.FieldName = "Type";
+      this.colType.MaxWidth = 100;
+      this.colType.MinWidth = 100;
       this.colType.Name = "colType";
+      this.colType.OptionsColumn.AllowSize = false;
       this.colType.Visible = true;
       this.colType.VisibleIndex = 1;
+      this.colType.Width = 100;
       // 
       // cboEntryTypes
       // 
@@ -333,21 +339,28 @@
       // colAmount
       // 
       this.colAmount.AppearanceCell.Options.UseTextOptions = true;
-      this.colAmount.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+      this.colAmount.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
       this.colAmount.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
       this.colAmount.DisplayFormat.FormatString = "c2";
       this.colAmount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
       this.colAmount.FieldName = "Amount";
+      this.colAmount.MaxWidth = 80;
+      this.colAmount.MinWidth = 80;
       this.colAmount.Name = "colAmount";
+      this.colAmount.OptionsColumn.AllowSize = false;
       this.colAmount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Amount", "Card Balance: {0:c2}")});
       this.colAmount.Visible = true;
       this.colAmount.VisibleIndex = 2;
+      this.colAmount.Width = 80;
       // 
       // colNotes
       // 
       this.colNotes.FieldName = "Notes";
       this.colNotes.Name = "colNotes";
+      this.colNotes.Visible = true;
+      this.colNotes.VisibleIndex = 3;
+      this.colNotes.Width = 207;
       // 
       // layoutControlGroup1
       // 
@@ -359,7 +372,6 @@
       this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
       this.layoutControlGroup1.Name = "layoutControlGroup1";
       this.layoutControlGroup1.Size = new System.Drawing.Size(599, 272);
-      this.layoutControlGroup1.Text = "layoutControlGroup1";
       this.layoutControlGroup1.TextVisible = false;
       // 
       // layoutControlItem1
@@ -369,9 +381,7 @@
       this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
       this.layoutControlItem1.Name = "layoutControlItem1";
       this.layoutControlItem1.Size = new System.Drawing.Size(579, 252);
-      this.layoutControlItem1.Text = "layoutControlItem1";
       this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-      this.layoutControlItem1.TextToControlDistance = 0;
       this.layoutControlItem1.TextVisible = false;
       // 
       // MainForm
